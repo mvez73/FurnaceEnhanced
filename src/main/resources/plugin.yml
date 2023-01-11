@@ -1,0 +1,34 @@
+name: FurnaceEnhanced
+version: '${project.version}'
+main: me.mvez73.furnaceenhanced.FurnaceEnhanced
+api-version: 1.17
+authors: [ mvez73 ]
+description: Configurable furnaces cook time speed
+permissions:
+  furnaceenhanced.10:
+    description: "10% boost speed"
+    default: false
+  furnaceenhanced.20:
+    description: "20% boost speed"
+    default: false
+  furnaceenhanced.30:
+    description: "30% boost speed"
+    default: false
+  furnaceenhanced.40:
+    description: "40% boost speed"
+    default: false
+  furnaceenhanced.50:
+    description: "50% boost speed"
+    default: false
+  furnaceenhanced.60:
+    description: "60% boost speed"
+    default: false
+  furnaceenhanced.70:
+    description: "70% boost speed"
+    default: false
+  furnaceenhanced.80:
+    description: "80% boost speed"
+    default: false
+  furnaceenhanced.90:
+    description: "90% boost speed"
+    default: false
