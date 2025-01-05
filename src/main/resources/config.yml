@@ -1,0 +1,6 @@
+#########################################################
+# Enable or disable the update checker. If disabled,    #
+# you'll not see if there's a new version available     #
+#########################################################
+update-checker-enabled: true
+update-checker-checkeveryxhours: 12
