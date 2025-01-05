@@ -11,13 +11,13 @@ import org.bukkit.event.inventory.FurnaceBurnEvent;
 import org.bukkit.event.inventory.FurnaceStartSmeltEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 
-
 public class FurnacesListener implements Listener {
 
-    public Player player;
+    Player player;
     int cookTimeReduction;
     int burnTimeReduction;
     int brewTimeReduction;
+    private static final String PERMISSION_PREFIX = "furnaceenhanced.";
 
     @EventHandler
     public void onPlayerInteract (PlayerInteractEvent event) {
@@ -34,7 +34,7 @@ public class FurnacesListener implements Listener {
             int burnTime = event.getBurnTime();
             int[] timeArray = new int[]{ 90,80,70,60,50,40,30,20,10 };
             for (int percent : timeArray) {
-                if (player != null && player.hasPermission("furnaceenhanced." + percent)) {
+                if (player != null && player.hasPermission(PERMISSION_PREFIX + percent)) {
                     burnTimeReduction = burnTime * percent / 100;
                     event.setBurnTime((short) (burnTime - burnTimeReduction));
                 }
@@ -47,7 +47,7 @@ public class FurnacesListener implements Listener {
         int cookTime = event.getTotalCookTime();
         int[] timeArray = new int[]{ 90,80,70,60,50,40,30,20,10 };
         for (int percent : timeArray) {
-            if (player != null && player.hasPermission("furnaceenhanced." + percent)) {
+            if (player != null && player.hasPermission(PERMISSION_PREFIX + percent)) {
                 cookTimeReduction = cookTime*percent/100;
                 event.setTotalCookTime(cookTime - cookTimeReduction);
                 return;
@@ -62,7 +62,7 @@ public class FurnacesListener implements Listener {
             int brewTime = event.getTotalBrewTime();
             int[] timeArray = new int[]{ 90,80,70,60,50,40,30,20,10 };
             for (int percent : timeArray) {
-                if (player != null && player.hasPermission("furnaceenhanced." + percent)) {
+                if (player != null && player.hasPermission(PERMISSION_PREFIX + percent)) {
                     brewTimeReduction = brewTime*percent/100;
                     event.setTotalBrewTime(brewTime - brewTimeReduction);
                     return;

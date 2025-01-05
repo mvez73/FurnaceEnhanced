@@ -1,7 +1,8 @@
 name: FurnaceEnhanced
 version: '${project.version}'
 main: me.mvez73.furnaceenhanced.FurnaceEnhanced
-api-version: 1.17
+#main: me.mvez73.furnaceenhanced.FurnaceEnhanced
+api-version: '1.20'
 authors: [ mvez73 ]
 description: Configurable furnaces cook time speed
 permissions:
